@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-	<a href="{{ route('admin.users.create') }}" class="label label-primary">Registrar nuevo usuario  <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span></a>
+	<H4><a href="{{ route('admin.users.create') }}" class="label label-primary">Registrar nuevo usuario  <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span></a></H4>
 	<table class="table table-striped">
 
 		<thead>
@@ -37,5 +37,7 @@
 		</tbody>
 
 	</table>	
-	{!! $users->render() !!}
+	<div class="text-center">
+		{!! $users->render() !!}
+	</div>
 @endsection

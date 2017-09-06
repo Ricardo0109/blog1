@@ -77,7 +77,7 @@ return [
 	|
 	*/
 
-	'locale' => 'en',
+	'locale' => 'es',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -90,7 +90,7 @@ return [
 	|
 	*/
 
-	'fallback_locale' => 'en',
+	'fallback_locale' => 'es',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -177,6 +177,7 @@ return [
 		 Cviebrock\EloquentSluggable\ServiceProvider::class,
 		 Collective\Html\HtmlServiceProvider::class,
 		 Laracasts\Flash\FlashServiceProvider::class,
+		 Laravelista\Ekko\EkkoServiceProvider::class,
 		/*
 		 * Application Service Providers...
 		 */
@@ -238,6 +239,7 @@ return [
 		//Aliases Personales
 		'Form' => Collective\Html\FormFacade::class,
 		'Html' => Collective\Html\HtmlFacade::class,
+		'Ekko' => Laravelista\Ekko\Facades\Ekko::class,
 		//'Flash' => Laracast\Flash\Flash::class,
 	],
 

@@ -10,6 +10,7 @@
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap.css')}}"/> 
 		<script src="{{ asset('plugins/jquery/js/jquery-3.2.1.js')}}"></script>
+		<script src="{{ asset('plugins/jquery/js/jquery-3.2.1.min.js')}}"></script>
 		<script src="{{ asset('plugins/bootstrap/js/bootstrap.js')}}"></script>
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -24,6 +25,7 @@
 			<div class ="row">
 				<div class="col-md-9" role="main">
 					@include('flash::message')
+					@include('layouts/_errors')
 					@yield('content')
 				</div>
 				<div  class="col-md-3" role="complementary">

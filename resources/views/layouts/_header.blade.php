@@ -11,9 +11,10 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="{{ route('admin.users.index') }}">Usuarios</a></li>
-            <li><a href="/posts">List</a></li>
+            <li class="{{ isActiveURL('/') }}"><a href="/">Home</a></li>
+            <li class="{{ isActiveRoute('admin.users.index') }}"><a href="{{ route('admin.users.index') }}">Usuarios</a></li>
+            <li class="{{ isActiveRoute('admin.category.index') }}"><a href="{{ route('admin.category.index') }}">Categorias</a></li>
+            <li class="{{ isActiveRoute('posts.index') }}"><a href="/posts">List</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

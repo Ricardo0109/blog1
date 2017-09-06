@@ -4,7 +4,11 @@ Route::get('/', 'PostController@welcome');
 
 Route::get('/about', 'PostController@about');
 
-Route::get('/posts', 'PostController@index');
+Route::get('/posts',[
+	'uses' => 'PostController@index', 
+ 	'as' => 'posts.index'
+ ]);
+
 Route::get('/posts/{post}', 'PostController@show');
 
 //CRUD de User
@@ -17,10 +21,19 @@ Route::get('/posts/{post}', 'PostController@show');
  		'uses' => 'UserController@destroy', 
  		'as' => 'users.destroy'
  	]);
+
  	/*Route::put('users/{user}/update', [
 		'uses' => 'UserController@edit', 
  		'as' => 'users.update'
  	]); */
+
+ 	Route::resource('category', 'CategoryController',['except' =>['destroy']]);
+ 	Route::get('category/{category}/destroy', [
+ 		'uses' => 'CategoryController@destroy', 
+ 		'as' => 'category.destroy'
+
+ 	 ]);
+
  });
 
 //Rutas sin controlador
